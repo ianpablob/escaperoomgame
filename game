@@ -1,0 +1,113 @@
+print('''
+                   .------.------.------.------.
+                   |A_  _ |A /\  |A _   |A .   |
+                   |( \/ )| /  \ | ( )  | / \  |
+                   | \  / | \  / |(_x_) |(_,_) |
+                   |  \/ A|  \/ A|  Y  A|  I  A|
+                   `------^------^------'------' 
+
+''')
+print("------------------ Bem vindo ao labirinto do Joker! ------------------")
+print("")
+print("Um jogo simples, digite suas escolhas e tente vencer!\n") 
+print("Existem varias formas de vencer esse jogo, mas existe o triplo de formas de perder! Você deve digitar SOMENTE UMA das opções em aspas de cada frase.\n")
+
+
+naipe = input('Escolha um naipe: "copas", "ouros", "paus - EM BREVE" ou "espadas - EM BREVE". Qual vai ser?  ')
+
+if str.lower(naipe) == "copas":
+    print("")
+    print("Você foi teleportado para uma sala cheia de relógios de parede, todos estão funcionando normalmente, mas há um que está parado.\n")
+    print("Uma porta está fechada e pede uma senha de quatros digitos para entrar e só aceitam números.\n")
+    digitvasc = input('Você deseja "digitar" a senha ou "vasculhar" a sala? ')
+
+    
+  
+    if digitvasc == "digitar":
+        senha = input("Digite a senha: ")
+        if senha == "1152":
+          print("Você escapou do jogo! Parabéns! \n")
+        else:
+          print("Os relógios ganham vida e atiram seus ponteiros em você. Você foi perfurado e morreu! Tente de novo!\n")
+    elif digitvasc == "vasculhar":
+        print("")
+        print("Você observa no relogio parado e percebe que indica 11:52! Você percebe um objeto brilhante também. \n")
+        digitvasc = input('Você deseja "digitar" a senha? ou "pegar" o objeto brilhante? ')
+        if digitvasc == "digitar":
+          print("")
+          senhal = input("Digite a senha: ")
+          if senhal == "1152":
+            print("Você escapou do jogo! Parabéns! \n")
+          else:
+            print("Os relógios ganham vida e atiram seus ponteiros em você. Você foi perfurado e morreu! Tente de novo!\n")
+          
+        elif digitvasc == "pegar":
+          print("Você pega o objeto brilhante! Ele explode na sua mão e você morre! GAME OVER!\n")
+    else:
+        print("Não tem essa opção!.\n")
+   
+elif str.lower(naipe) == "ouros":
+    print("")
+    homem = input("Você foi teleportado para uma selva e um homem vestindo roupas tribais aparece armado com uma lança. O que você deseja fazer? conversar, atacar ou esconder? ")
+    if homem == "conversar":
+      print("Você conversou com o homem. Ele também se perdeu no jogo e está tentando sobreviver. Agora você tem um aliado! \n")
+      barco = input("Depois de uma longa caminhada vocês encontram um barco. Deseja tentar fugir de barco? S ou N? ")
+      if barco == "s":
+        portalmar = input('Vocês chegaram próximos a um portal, mas há um gigante próximo a ele dormindo. Deseja tentar "passar" sorrateiramente ou "voltar"? \n')
+        if portalmar == "passar":
+          print("Você passou ao portal e conseguiu escapar do jogo! Parabéns\n")
+        elif portalmar == "voltar":
+          mushroom = input('Vocês voltaram a ilha e agora estão morrendo de fome. Vocês encontram alguns cogumelos no seu caminho. Deseja comer? "s" ou "n".\n')
+          if mushroom == "s":
+            print("Você comeram alguns cogumelos e morreram envenenados! GAME OVER \n")
+          elif mushroom == "n":
+            print("Vocês seguiram procurando alguma coisa para comer. \n")
+            house = input('Vocês continuaram caminhando e encontraram uma casa. Desejam, entrar nela? "s" ou  "n".\n')
+            if house == "s":
+              print("Vocês entrou na casa e foi surpreendido por um morador. È hora de lutar!\n")
+              golpe = input('Você deseja "socar", "chutar", "defender" ou "fugir? " \n')
+              if golpe == "socar":
+                print("Você acerta um soco no queixo do morador e ele é nocauteado! \n")
+                print("Após isso vocês não somente encontram comida, mas também uma sala de comando do jogo e consegue se teleportar pra fora do jogo. Você escapou! Parabéns!")
+              elif golpe == "chutar":
+                print("Você tentou um chute, mas o morador esquivou. \n")
+                seggolpe = input('Você deseja "socar", "defender" ou "fugir? " \n')
+                if seggolpe == "socar":
+                    print("O morador defende o soco e aproveita sua guarda baixa para te nocautear. Você foi morto! GAME OVER! \n ")
+                elif seggolpe == "defender":
+                    print("O morador tentou te socar, mas você defendeu com sucesso. Seu aliado aproveita e nocauteia o morador! \n")
+                    print("Após isso vocês não somente encontram comida, mas também uma sala de comando do jogo e consegue se teleportar pra fora do jogo. Você escapou! Parabéns!")
+                elif seggolpe == "fugir":
+                    print("Você tentou fugir, mas o morador atirou uma adaga em você. Você está morto! GAME OVER! \n")
+              elif golpe == "defender":
+                print("Você tentou ficar na defesa, mas o morador aproveitou e atacou seu aliado. Você desesperado querendo ajudar abaixou a guarda e também foi atacado. Você perdeu! GAME OVER! \n")
+              elif golpe == "fugir":
+                print("Você tentou fugir, mas o morador atirou uma adaga em você. Você está morto! GAME OVER! \n")
+                
+            elif house == "n":
+              print("Vocês decidem continuar o caminho, mas a fome é tão grande que desmaiam. Uma onça feroz vem e se alimenta de vocês! GAME OVER \n")
+            else:
+              print("Não tem essa opção!\n")
+            
+        else:
+          print("Não tem essa opção!\n")
+      else:
+        print("Vocês consideraram que seria muito arriscado e continuam procurando uma saída! \n")
+        velho = input("Vocês encontram uma velho que diz que te tirará do jogo se você resolver um enigma. Deseja continuar? s/n")
+        if velho == "s":
+          charada=input("O velho lança o enigma: o pai de Maria tinha 5 filhas: Lalá, Lelé, Lili, Loló, e qual o nome da quinta? ")
+          if charada == "maria":
+            print("O velho te parabeniza e te teleporta pra fora do jogo. Você venceu! Parabéns!")
+          else:
+            print("Você errou e isso deixou o velho muito bravo. O velho se revela um gigantesco monstro e te destrói. Você perdeu! GAME OVER!")
+            
+          
+          
+    if homem == "atacar":
+      print("")
+      print("Você atacou o homem, mas ele se defendeu perfurando seu peito. Você morreu! \n")
+    if homem == "esconder":
+      print("")
+      print("Você escondeu do homem. Ele passou e não te viu. \n")
+      print("Sozinho na selva, sem nenhuma experiência você acaba morrendo ao comer uma planta venenosa! Você perdeu! GAME OVER")
+      
